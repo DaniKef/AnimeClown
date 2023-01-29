@@ -23,22 +23,42 @@
     </header>
 
     <main>
-        
-        <p>Название аниме</p>
-        <input type="text" name="inputName" id="inputName">
-        <p>URL картинки</p>
-        <input type="text" name="inputPicture" id="inputPicture">
-        <p>Описание</p>
-        <input type="text" name="inputDescription" id="inputDescription">
-        <p>Оценка сюжета</p>
-        <input type="number" min="0" max="10" name="inputGradePlot" id="inputGradePlot">
-        <p>Оценка анимации</p>
-        <input type="number" min="0" max="10" name="inputGradeAnimation" id="inputGradeAnimation">
-        <p>Оценка звука</p>
-        <input type="number" min="0" max="10" name="inputGradeSound" id="inputGradeSound">
-        <p>Оценка персонажей</p>
-        <input type="number" min="0" max="10" name="inputGradeCharacters" id="inputGradeCharacters">
-        <button type="button" onclick='postData()'>Добавить</button>
+        <div class="profile-div-p-input">
+            <p class="profile-p">Название аниме:</p>
+            <input type="text" name="inputName" id="inputName" class="profile-inputs">
+        </div>
+        <div class="profile-div-p-input">
+            <p class="profile-p">URL картинки:</p>
+            <input type="text" name="inputPicture" id="inputPicture" class="profile-inputs">
+        </div>
+        <div class="profile-div-p-input">
+            <p class="profile-p">Описание:</p>
+            <input type="text" name="inputDescription" id="inputDescription" class="profile-inputs">
+        </div>
+        <div class="profile-div-p-input">
+            <p class="profile-p">Оценка сюжета:</p>
+            <input type="number" min="0" max="10" name="inputGradePlot" id="inputGradePlot" class="profile-inputs">
+        </div>
+        <div class="profile-div-p-input">
+            <p class="profile-p">Оценка анимации:</p>
+            <input type="number" min="0" max="10" name="inputGradeAnimation" id="inputGradeAnimation" class="profile-inputs">
+        </div>
+        <div class="profile-div-p-input">
+            <p class="profile-p">Оценка звука:</p>
+            <input type="number" min="0" max="10" name="inputGradeSound" id="inputGradeSound" class="profile-inputs">
+        </div>
+        <div class="profile-div-p-input">
+            <p class="profile-p">Оценка персонажей:</p>
+            <input type="number" min="0" max="10" name="inputGradeCharacters" id="inputGradeCharacters" class="profile-inputs">
+        </div>
+        <button type="button" class="addAnimeButton" onclick='postData()'>Добавить</button>
+        <br><br>
+        <br><br>
+        <button type="button" class="addAnimeButton" onclick='getListAnime()'>Получить список аниме</button>
+        <br><br>
+        <div class='line_under'></div>
+        <br>
+        <div id="listOfAnimeInProfile"></div>
     </main>
     <script src="functions.js"></script>
 </body>

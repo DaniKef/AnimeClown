@@ -49,6 +49,7 @@ ul {
     border-radius: 6px;
     border: 1px solid black;
     width: 90px;
+    font-family: 'Open Sans', sans-serif;
 }
 #authorizationButton {
     border: none;
@@ -134,4 +135,63 @@ ul {
     font-size: 15px;
     font-weight: bolder;
     margin-bottom: -5px;
+}
+
+
+
+
+
+
+.profile-div-p-input {
+    display: flex;
+    align-items: center;
+}
+
+.profile-p {
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.profile-inputs {
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 10px;
+    border-radius: 6px;
+    border: 1px solid black;
+    width: 200px;
+}
+.addAnimeButton {
+    margin-left: 30px;
+    border: none;
+    background-color: inherit;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.addAnimeButton:hover{
+    color: #bf3d3d;
+    cursor: pointer;
+}
+
+.anime-profile-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.deleteAnimeButton {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    border: 1px solid #bf3d3d;
+    margin-left: 30px;
+    background: transparent;
+    height: 30px;
+    margin-right: 50%;
+}
+.deleteAnimeButton:hover {
+    background: #bf3d3d;
+    color: white;
+}
+.line_under1 {
+    border-bottom: 1px solid #bf3d3d;
+    width: 100%;
+    margin-left: 10px;
 }

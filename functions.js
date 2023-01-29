@@ -9,7 +9,7 @@ window.onload = () => {
     else 
     {
         authorizationnav.innerHTML = "";
-        authorizationnav.innerHTML += "<input type='text' name='inputPassword' id='inputPassword'>\n"+
+        authorizationnav.innerHTML += "<input type='password' name='inputPassword' id='inputPassword'>\n"+
         "<button type='button' onclick='authorization()' id='authorizationButton'>Войти</button>";  
     }
     showAllAnime(); 
@@ -93,4 +93,37 @@ function authorization(){
                 })
                 location.reload();
         })
+}
+
+
+function getListAnime() {
+    const formData = new FormData();
+    formData.append('operation', 'getAnimeList');
+    fetch(scriptUrl, {
+        method: 'POST', body: formData
+    })
+        .then(res => res.json())
+        .then(data => {
+            listOfAnimeInProfile.innerHTML = "";
+            data.forEach((row) => {
+                listOfAnimeInProfile.innerHTML += "<div class='anime-profile-div'>\n" +
+                "<p class='anime-name'>"+ row.name+ "</p>\n" +
+                "<button type='button' class='deleteAnimeButton' onclick='deleteAnime(this)' anime-name='" + row.name + "'>Удалить</button>\n"+
+                "</div>" +
+                "<div class='line_under1'></div>\n" 
+               })
+        })
+}
+
+
+
+function deleteAnime(object) {
+    const formData = new FormData();
+    formData.append('operation', 'deleteAnime');
+    formData.append('animeName', object.getAttribute("anime-name"));
+    fetch(scriptUrl, {
+        method: 'POST', body: formData
+    })
+        .then(res => res.json())
+    location.reload();
 }
