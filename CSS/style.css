@@ -29,7 +29,20 @@ ul {
     color: black;
     font-weight: bolder;
 }
-.authorization-nav {
+.authorizationnav {
+    margin-right: 30px;
+}
+.hrefProfile{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+.hrefProfile:hover{
+    cursor:pointer;
+    color:#bf3d3d;
+}
+.authorizationnav1 {
     margin-right: 30px;
 }
 #inputPassword {

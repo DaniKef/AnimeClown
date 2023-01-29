@@ -1,6 +1,17 @@
 const scriptUrl = 'https://script.google.com/macros/s/AKfycbxLewraHFsxim_y-KJ66K4unZYGY5CH4QD1QUnEy2g0_BkBk_fsAVoQhrWoKBpBYubv/exec';
 let dataOnSite;
 window.onload = () => {
+    if(localStorage.getItem("authorized") == 'true')
+    {
+        authorizationnav.innerHTML = "";
+        authorizationnav.innerHTML += "<a class='hrefProfile' href='profile.html'>Профиль</a>";
+    }
+    else 
+    {
+        authorizationnav.innerHTML = "";
+        authorizationnav.innerHTML += "<input type='text' name='inputPassword' id='inputPassword'>\n"+
+        "<button type='button' onclick='authorization()' id='authorizationButton'>Войти</button>";  
+    }
     showAllAnime(); 
 }
 
@@ -66,7 +77,7 @@ fetch(scriptUrl, {
     location.reload();
 }
 
-function Authorization(){
+function authorization(){
     const formData = new FormData();
     const inputPassword = document.getElementById("inputPassword");
     formData.append('operation', 'authorization');
@@ -75,5 +86,11 @@ function Authorization(){
         method: 'POST', body: formData
     })
         .then(res => res.json())
-        .then(data => {console.log(data)})
+        .then(data => {
+            data.forEach((row) => {
+                 if(row.result=="true") {localStorage.setItem("authorized",true);} 
+                 else {localStorage.setItem("authorized",false);}
+                })
+                location.reload();
+        })
 }
