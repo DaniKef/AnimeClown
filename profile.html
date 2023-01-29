@@ -24,10 +24,22 @@
     </header>
 
     <main>
-        <div class="div-anime-list">
-            <ul id="listOfAnime">
-            </ul>
-        </div>
+        
+        <p>Название аниме</p>
+        <input type="text" name="inputName" id="inputName">
+        <p>URL картинки</p>
+        <input type="text" name="inputPicture" id="inputPicture">
+        <p>Описание</p>
+        <input type="text" name="inputDescription" id="inputDescription">
+        <p>Оценка сюжета</p>
+        <input type="number" min="0" max="10" name="inputGradePlot" id="inputGradePlot">
+        <p>Оценка анимации</p>
+        <input type="number" min="0" max="10" name="inputGradeAnimation" id="inputGradeAnimation">
+        <p>Оценка звука</p>
+        <input type="number" min="0" max="10" name="inputGradeSound" id="inputGradeSound">
+        <p>Оценка персонажей</p>
+        <input type="number" min="0" max="10" name="inputGradeCharacters" id="inputGradeCharacters">
+        <button type="button" onclick='postData()'>Добавить</button>
     </main>
     <script src="functions.js"></script>
 </body>

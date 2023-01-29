@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+header {
+    margin: 0;
+    height: 100px;
+    background-color: #f0f0f0;
+}
+
+li {
+    list-style-type: none; /* Убираем маркеры */
+}
+ul {
+    padding-left: 0; /* Сдвигаем список влево */
+}
+
+
+.header-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.site-name {
+    margin-left: 50px;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+.authorization-nav {
+    margin-right: 30px;
+}
+#inputPassword {
+    border-radius: 6px;
+    border: 1px solid black;
+    width: 90px;
+}
+#authorizationButton {
+    border: none;
+    background-color: inherit;
+}
+#authorizationButton:hover{
+    color: #bf3d3d;
+    cursor: pointer;
+}
+
+
+
+.div-anime-list {
+    width: 90%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+#listOfAnime {
+    margin-top: 0;
+}
+.anime {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.listOfAnime-li {
+    background-color: #f5f5f5;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+.AnimePicture{
+    width: 212px;
+    height: 300px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+.anime-name {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #bf3d3d;
+    margin-top: 5px;
+    font-weight: bolder;
+}
+.div-anime-grade {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    width: 65px;
+    position: absolute;
+    background-color: #e6da57;
+    margin-top: 5px;
+    margin-left: 20px;
+    border-bottom-right-radius: 7px;
+}
+.div-anime-grade img {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.div-anime-grade p {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    font-weight: bolder;
+}
+
+.anime-description {
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.line_under {
+    border-bottom: 1px solid #bf3d3d;
+    width: 200px;
+    margin-left: 10px;
+}
+.p-anime-grade {
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-bottom: -5px;
+}
