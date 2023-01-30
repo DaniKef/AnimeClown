@@ -22,11 +22,20 @@
     </header>
 
     <main>
+        <select class="form-control-sort1" id="sortParam" onchange="sortList()">
+            <option value="nameAZ">Name (A-Z)</option>
+            <option value="nameZA">Name (Z-A)</option>
+            <option value="gradeB">Grade Best</option>
+            <option value="gradeW">Grade Worst</option>
+        </select>
         <div class="div-anime-list">
             <ul id="listOfAnime">
             </ul>
         </div>
     </main>
+    <footer>
+        <div><p>Anime Clown. 2023.</p></div>
+    </footer>
     <script src="functions.js"></script>
 </body>
 </html>

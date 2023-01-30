@@ -1,3 +1,7 @@
+main {
+    min-height: 100vh;
+}
+
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -6,6 +10,19 @@ header {
     margin: 0;
     height: 100px;
     background-color: #f0f0f0;
+}
+footer {
+    background-color: #f0f0f0;
+}
+footer div {
+    margin: 0 auto;
+    margin-left: 15px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+footer div p {
+    font-weight: bolder;
+    color: #bf3d3d;
 }
 
 li {
@@ -73,22 +90,15 @@ ul {
     margin-top: 0;
 }
 .anime {
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
 }
 .listOfAnime-li {
-    background-color: #f5f5f5;
     margin-bottom: 5px;
-    padding-bottom: 5px;
     border-radius: 10px;
 }
 .AnimePicture{
     width: 212px;
     height: 300px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 20px;
 }
 
 .anime-name {
@@ -105,8 +115,6 @@ ul {
     width: 65px;
     position: absolute;
     background-color: #e6da57;
-    margin-top: 5px;
-    margin-left: 20px;
     border-bottom-right-radius: 7px;
 }
 .div-anime-grade img {
@@ -124,6 +132,11 @@ ul {
     margin-left: 10px;
     font-size: 15px;
     font-weight: bolder;
+}
+.anime-information {
+    padding-bottom: 7px;
+    background-color: #f5f5f5;
+    width: 100%;
 }
 .line_under {
     border-bottom: 1px solid #bf3d3d;
@@ -151,6 +164,7 @@ ul {
     margin-left: 10px;
     font-size: 15px;
     font-weight: bolder;
+    width: 200px;
 }
 .profile-inputs {
     font-family: 'Open Sans', sans-serif;
@@ -163,7 +177,7 @@ ul {
     margin-left: 30px;
     border: none;
     background-color: inherit;
-    font-size: 15px;
+    font-size: 25px;
     font-weight: bolder;
 }
 .addAnimeButton:hover{
@@ -194,4 +208,25 @@ ul {
     border-bottom: 1px solid #bf3d3d;
     width: 100%;
     margin-left: 10px;
+}
+
+.div-button-select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-control-sort {
+    margin-right: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    background: transparent;
+}
+.form-control-sort1 {
+    margin-top: 10px;
+    margin-left: 5%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    background: transparent;
 }

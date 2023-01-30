@@ -74,7 +74,6 @@ fetch(scriptUrl, {
 })
     .then(res => res.json())
     .then(data => {})
-    location.reload();
 }
 
 function authorization(){
@@ -104,10 +103,11 @@ function getListAnime() {
     })
         .then(res => res.json())
         .then(data => {
+            dataOnSite = data;
             listOfAnimeInProfile.innerHTML = "";
             data.forEach((row) => {
                 listOfAnimeInProfile.innerHTML += "<div class='anime-profile-div'>\n" +
-                "<p class='anime-name'>"+ row.name+ "</p>\n" +
+                "<p class='anime-name'>"+ row.name+ ". Оценка: " + row.summaryGrade+ "</p>\n" +
                 "<button type='button' class='deleteAnimeButton' onclick='deleteAnime(this)' anime-name='" + row.name + "'>Удалить</button>\n"+
                 "</div>" +
                 "<div class='line_under1'></div>\n" 
@@ -126,4 +126,115 @@ function deleteAnime(object) {
     })
         .then(res => res.json())
     location.reload();
+}
+
+function sortProfile() {
+    let sortType = document.getElementById("sortParam");
+    let data = dataOnSite;
+    if (sortType.value == "nameAZ") {
+        data.sort(function (a, b) {
+            if (a.name.toString().toLowerCase() < b.name.toString().toLowerCase()) {
+                return -1;
+            }
+            if (a.name.toString().toLowerCase() > b.name.toString().toLowerCase()) {
+                return 1;
+            }
+            return 0;
+        })
+    }
+    else if (sortType.value == "nameZA") {
+        data.sort(function (a, b) {
+            if (a.name.toString().toLowerCase() > b.name.toString().toLowerCase()) {
+                return -1;
+            }
+            if (a.name.toString().toLowerCase() < b.name.toString().toLowerCase()) {
+                return 1;
+            }
+            return 0;
+        })
+    }
+    else if (sortType.value == "gradeB") {
+        data.sort(function (a, b) {
+            if (parseInt(a.summaryGrade) > parseInt(b.summaryGrade)) {
+                return -1;
+            }
+            if (parseInt(a.summaryGrade) < parseInt(b.summaryGrade)) {
+                return 1;
+            }
+            return 0;
+        })
+    }
+    else if (sortType.value == "gradeW") {
+        data.sort(function (a, b) {
+            if (parseInt(a.summaryGrade) < parseInt(b.summaryGrade)) {
+                return -1;
+            }
+            if (parseInt(a.summaryGrade) > parseInt(b.summaryGrade)) {
+                return 1;
+            }
+            return 0;
+        })
+    }
+    printListAnimeProfile(data);
+}
+
+function sortList(){
+    let sortType = document.getElementById("sortParam");
+    let data = dataOnSite;
+    if (sortType.value == "nameAZ") {
+        data.sort(function (a, b) {
+            if (a.name.toString().toLowerCase() < b.name.toString().toLowerCase()) {
+                return -1;
+            }
+            if (a.name.toString().toLowerCase() > b.name.toString().toLowerCase()) {
+                return 1;
+            }
+            return 0;
+        })
+    }
+    else if (sortType.value == "nameZA") {
+        data.sort(function (a, b) {
+            if (a.name.toString().toLowerCase() > b.name.toString().toLowerCase()) {
+                return -1;
+            }
+            if (a.name.toString().toLowerCase() < b.name.toString().toLowerCase()) {
+                return 1;
+            }
+            return 0;
+        })
+    }
+    else if (sortType.value == "gradeB") {
+        data.sort(function (a, b) {
+            if (parseInt(a.summaryGrade) > parseInt(b.summaryGrade)) {
+                return -1;
+            }
+            if (parseInt(a.summaryGrade) < parseInt(b.summaryGrade)) {
+                return 1;
+            }
+            return 0;
+        })
+    }
+    else if (sortType.value == "gradeW") {
+        data.sort(function (a, b) {
+            if (parseInt(a.summaryGrade) < parseInt(b.summaryGrade)) {
+                return -1;
+            }
+            if (parseInt(a.summaryGrade) > parseInt(b.summaryGrade)) {
+                return 1;
+            }
+            return 0;
+        })
+    }
+    addGotData(data);
+}
+
+function printListAnimeProfile(data) {
+    listOfAnimeInProfile.innerHTML = "";
+    data.forEach((row) => {
+        listOfAnimeInProfile.innerHTML += "<div class='anime-profile-div'>\n" +
+        "<p class='anime-name'>"+ row.name+ ". Оценка: " + row.summaryGrade+ "</p>\n" +
+        "<button type='button' class='deleteAnimeButton' onclick='deleteAnime(this)' anime-name='" + row.name + "'>Удалить</button>\n"+
+        "</div>" +
+        "<div class='line_under1'></div>\n" 
+       })
 }

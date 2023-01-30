@@ -54,12 +54,23 @@
         <button type="button" class="addAnimeButton" onclick='postData()'>Добавить</button>
         <br><br>
         <br><br>
-        <button type="button" class="addAnimeButton" onclick='getListAnime()'>Получить список аниме</button>
+        <div class="div-button-select">
+            <button type="button" class="addAnimeButton" onclick='getListAnime()'>Получить список аниме</button>
+            <select class="form-control-sort" id="sortParam" onchange="sortProfile()">
+                <option value="nameAZ">Name (A-Z)</option>
+                <option value="nameZA">Name (Z-A)</option>
+                <option value="gradeB">Grade Best</option>
+                <option value="gradeW">Grade Worst</option>
+            </select>
+        </div>
         <br><br>
         <div class='line_under'></div>
         <br>
         <div id="listOfAnimeInProfile"></div>
     </main>
+    <footer>
+        <div><p>Anime Clown. 2023.</p></div>
+    </footer>
     <script src="functions.js"></script>
 </body>
 </html>
