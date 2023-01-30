@@ -96,7 +96,6 @@ ul {
 }
 .listOfAnime-li {
     margin-bottom: 5px;
-    border: 1px solid #dedede;
 }
 .AnimePicture{
     width: 212px;
@@ -139,6 +138,7 @@ ul {
     padding-bottom: 7px;
     background-color: #f5f5f5;
     width: 100%;
+    border: 1px solid #dedede;
 }
 .line_under {
     border-bottom: 1px solid #bf3d3d;
