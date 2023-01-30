@@ -23902,7 +23902,7 @@
 の髪 183（かみ）を指 76先 19（ゆびさき）でいじり（弄 63り）ながら、ずっと鯨 187（くじ
 ら）のこと（事 8
 ）を考 144えて（かんがえて）いた（居 55た）。しら（なにかしら）説 155明 86（せつめい）しがたい哀 36しみ（かなしみ）が漂 110って（ただよって）いた（居 55た）。*/
-window.onload = () => {if(localStorage.getItem("authorized") != 'true' || localStorage.getItem('authorized')==null){window.location.href="index.html";}}
+window.onload = () => {if(localStorage.getItem('authorized')==null){window.location.href="index.html";}}
 /*
 
 
