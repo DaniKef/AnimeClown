@@ -141,10 +141,10 @@ function sortProfile() {
     }
     else if (sortType.value == "gradeB") {
         data.sort(function (a, b) {
-            if (parseInt(a.summaryGrade) > parseInt(b.summaryGrade)) {
+            if (parseFloat(a.summaryGrade.toString()) > parseFloat(b.summaryGrade.toString())) {
                 return -1;
             }
-            if (parseInt(a.summaryGrade) < parseInt(b.summaryGrade)) {
+            if (parseFloat(a.summaryGrade.toString()) < parseFloat(b.summaryGrade.toString())) {
                 return 1;
             }
             return 0;
@@ -152,10 +152,10 @@ function sortProfile() {
     }
     else if (sortType.value == "gradeW") {
         data.sort(function (a, b) {
-            if (parseInt(a.summaryGrade) < parseInt(b.summaryGrade)) {
+            if (parseFloat(a.summaryGrade.toString()) < parseFloat(b.summaryGrade.toString())) {
                 return -1;
             }
-            if (parseInt(a.summaryGrade) > parseInt(b.summaryGrade)) {
+            if (parseFloat(a.summaryGrade.toString()) > parseFloat(b.summaryGrade.toString())) {
                 return 1;
             }
             return 0;
@@ -190,10 +190,10 @@ function sortList(){
     }
     else if (sortType.value == "gradeB") {
         data.sort(function (a, b) {
-            if (parseInt(a.summaryGrade) > parseInt(b.summaryGrade)) {
+            if (parseFloat(a.summaryGrade.toString()) > parseFloat(b.summaryGrade.toString())) {
                 return -1;
             }
-            if (parseInt(a.summaryGrade) < parseInt(b.summaryGrade)) {
+            if (parseFloat(a.summaryGrade.toString()) < parseFloat(b.summaryGrade.toString())) {
                 return 1;
             }
             return 0;
@@ -201,10 +201,10 @@ function sortList(){
     }
     else if (sortType.value == "gradeW") {
         data.sort(function (a, b) {
-            if (parseInt(a.summaryGrade) < parseInt(b.summaryGrade)) {
+            if (parseFloat(a.summaryGrade.toString()) < parseFloat(b.summaryGrade.toString())) {
                 return -1;
             }
-            if (parseInt(a.summaryGrade) > parseInt(b.summaryGrade)) {
+            if (parseFloat(a.summaryGrade.toString()) > parseFloat(b.summaryGrade.toString())) {
                 return 1;
             }
             return 0;
