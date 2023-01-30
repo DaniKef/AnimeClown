@@ -65,8 +65,8 @@ function authorization(){
         .then(res => res.json())
         .then(data => {
             data.forEach((row) => {
-                 if(row.result=="99334311355") {localStorage.setItem("authorized",false);} 
-                 else {localStorage.setItem("authorized",true);}
+                 if(row.result=="99334311355") {localStorage.setItem("authorized","99334311355");} 
+                 else {localStorage.setItem("authorized","1100222118");}
                 })
                 location.reload();
         })
@@ -101,7 +101,7 @@ function deleteAnime(object) {
     location.reload();
 }
 window.onload = () => {
-    if(localStorage.getItem("authorized") == "false" || localStorage.getItem('authorized')==null)
+    if(localStorage.getItem("authorized") == "99334311355" || localStorage.getItem('authorized')==null || localStorage.getItem("authorized") != "1100222118")
     {
         authorizationnav.innerHTML = "";
         authorizationnav.innerHTML += "<input type='password' name='inputPassword' id='inputPassword'>\n"+
