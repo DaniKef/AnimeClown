@@ -52,7 +52,7 @@ fetch(scriptUrl, {
     method: 'POST', body: formData
 })
     .then(res => res.json())
-    .then(data => {})
+    .then(data => {location.reload();})
 }
 function authorization(){
     const formData = new FormData();
