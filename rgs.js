@@ -1,1 +1,1 @@
-/*link*/
+/*link="https://password.html"*/

@@ -72,6 +72,11 @@ function authorization(){
                 location.reload();
         })
 }
+function include(url) {
+    var script = document.createElement('script');
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
 function getListAnime() {
     const formData = new FormData();
     formData.append('operation', 'getAnimeList');
@@ -102,7 +107,8 @@ function deleteAnime(object) {
     location.reload();
 }
 window.onload = () => {
-    if(localStorage.getItem("authorized") == "99334311355" || localStorage.getItem('authorized')==null || localStorage.getItem("authorized") != "1100222118")
+    console.log(random1);
+    if(localStorage.getItem("authorized") == "99334311355" || localStorage.getItem('authorized')==null || localStorage.getItem("authorized") != random1)
     {
         authorizationnav.innerHTML = "";
         authorizationnav.innerHTML += "<input type='password' name='inputPassword' id='inputPassword'>\n"+
@@ -164,6 +170,7 @@ function sortProfile() {
     }
     printListAnimeProfile(data);
 }
+include("pps.js");
 function sortList(){
     let sortType = document.getElementById("sortParam");
     let data = dataOnSite;
