@@ -10,9 +10,11 @@ header {
     margin: 0;
     height: 100px;
     background-color: #f0f0f0;
+    border-bottom: 1px solid #dedede;
 }
 footer {
     background-color: #f0f0f0;
+    border-top: 1px solid #dedede;
 }
 footer div {
     margin: 0 auto;
@@ -94,7 +96,7 @@ ul {
 }
 .listOfAnime-li {
     margin-bottom: 5px;
-    border-radius: 10px;
+    border: 1px solid #dedede;
 }
 .AnimePicture{
     width: 212px;
