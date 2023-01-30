@@ -11,10 +11,12 @@ header {
     height: 100px;
     background-color: #f0f0f0;
     border-bottom: 1px solid #dedede;
+    width: 100%;
 }
 footer {
     background-color: #f0f0f0;
     border-top: 1px solid #dedede;
+    width: 100%;
 }
 footer div {
     margin: 0 auto;
