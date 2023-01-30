@@ -1,5 +1,6 @@
 const scriptUrl = 'https://script.google.com/macros/s/AKfycbxLewraHFsxim_y-KJ66K4unZYGY5CH4QD1QUnEy2g0_BkBk_fsAVoQhrWoKBpBYubv/exec';
 let dataOnSite;
+
 function showAllAnime() {
     fetch(scriptUrl)//
             .then(res => res.json())
@@ -141,10 +142,10 @@ function sortProfile() {
     }
     else if (sortType.value == "gradeB") {
         data.sort(function (a, b) {
-            if (parseFloat(a.summaryGrade.toString()) > parseFloat(b.summaryGrade.toString())) {
+            if (parseFloat(a.summaryGrade) > parseFloat(b.summaryGrade)) {
                 return -1;
             }
-            if (parseFloat(a.summaryGrade.toString()) < parseFloat(b.summaryGrade.toString())) {
+            if (parseFloat(a.summaryGrade) < parseFloat(b.summaryGrade)) {
                 return 1;
             }
             return 0;
@@ -152,10 +153,10 @@ function sortProfile() {
     }
     else if (sortType.value == "gradeW") {
         data.sort(function (a, b) {
-            if (parseFloat(a.summaryGrade.toString()) < parseFloat(b.summaryGrade.toString())) {
+            if (parseFloat(a.summaryGrade) < parseFloat(b.summaryGrade)) {
                 return -1;
             }
-            if (parseFloat(a.summaryGrade.toString()) > parseFloat(b.summaryGrade.toString())) {
+            if (parseFloat(a.summaryGrade) > parseFloat(b.summaryGrade)) {
                 return 1;
             }
             return 0;
@@ -190,10 +191,10 @@ function sortList(){
     }
     else if (sortType.value == "gradeB") {
         data.sort(function (a, b) {
-            if (parseFloat(a.summaryGrade.toString()) > parseFloat(b.summaryGrade.toString())) {
+            if (parseFloat(a.summaryGrade) > parseFloat(b.summaryGrade)) {
                 return -1;
             }
-            if (parseFloat(a.summaryGrade.toString()) < parseFloat(b.summaryGrade.toString())) {
+            if (parseFloat(a.summaryGrade) < parseFloat(b.summaryGrade)) {
                 return 1;
             }
             return 0;
@@ -201,10 +202,10 @@ function sortList(){
     }
     else if (sortType.value == "gradeW") {
         data.sort(function (a, b) {
-            if (parseFloat(a.summaryGrade.toString()) < parseFloat(b.summaryGrade.toString())) {
+            if (parseFloat(a.summaryGrade) < parseFloat(b.summaryGrade)) {
                 return -1;
             }
-            if (parseFloat(a.summaryGrade.toString()) > parseFloat(b.summaryGrade.toString())) {
+            if (parseFloat(a.summaryGrade) > parseFloat(b.summaryGrade)) {
                 return 1;
             }
             return 0;
