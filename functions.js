@@ -1,20 +1,5 @@
 const scriptUrl = 'https://script.google.com/macros/s/AKfycbxLewraHFsxim_y-KJ66K4unZYGY5CH4QD1QUnEy2g0_BkBk_fsAVoQhrWoKBpBYubv/exec';
 let dataOnSite;
-window.onload = () => {
-    if(localStorage.getItem("authorized") == 'true')
-    {
-        authorizationnav.innerHTML = "";
-        authorizationnav.innerHTML += "<a class='hrefProfile' href='profile.html'>Профиль</a>";
-    }
-    else 
-    {
-        authorizationnav.innerHTML = "";
-        authorizationnav.innerHTML += "<input type='password' name='inputPassword' id='inputPassword'>\n"+
-        "<button type='button' onclick='authorization()' id='authorizationButton'>Войти</button>";  
-    }
-    showAllAnime(); 
-}
-
 function showAllAnime() {
     fetch(scriptUrl)//
             .then(res => res.json())
@@ -24,8 +9,6 @@ function showAllAnime() {
                 addGotData(data);
             })
 }
-
-
 function addGotData(data) 
 {
     listOfAnime.innerHTML = "";
@@ -47,8 +30,6 @@ function addGotData(data)
         "<\li>"
     })
 }
-
-
 function postData()
 {
 const formData = new FormData();
@@ -59,7 +40,6 @@ const inputGradePlot = document.getElementById("inputGradePlot");
 const inputGradeAnimation = document.getElementById("inputGradeAnimation");
 const inputGradeSound = document.getElementById("inputGradeSound");
 const inputGradeCharacters = document.getElementById("inputGradeCharacters");
-
 formData.append('operation', 'addAnime');
 formData.append('name', inputName.value);
 formData.append('pictureURL', inputPicture.value);
@@ -68,14 +48,12 @@ formData.append('gradePlot', inputGradePlot.value);
 formData.append('gradeAnimation', inputGradeAnimation.value);
 formData.append('gradeSound', inputGradeSound.value);
 formData.append('gradeCharacters', inputGradeCharacters.value);
-
 fetch(scriptUrl, {
     method: 'POST', body: formData
 })
     .then(res => res.json())
     .then(data => {})
 }
-
 function authorization(){
     const formData = new FormData();
     const inputPassword = document.getElementById("inputPassword");
@@ -87,14 +65,12 @@ function authorization(){
         .then(res => res.json())
         .then(data => {
             data.forEach((row) => {
-                 if(row.result=="true") {localStorage.setItem("authorized",true);} 
-                 else {localStorage.setItem("authorized",false);}
+                 if(row.result=="99334311355") {localStorage.setItem("authorized",false);} 
+                 else {localStorage.setItem("authorized",true);}
                 })
                 location.reload();
         })
 }
-
-
 function getListAnime() {
     const formData = new FormData();
     formData.append('operation', 'getAnimeList');
@@ -114,9 +90,6 @@ function getListAnime() {
                })
         })
 }
-
-
-
 function deleteAnime(object) {
     const formData = new FormData();
     formData.append('operation', 'deleteAnime');
@@ -127,7 +100,20 @@ function deleteAnime(object) {
         .then(res => res.json())
     location.reload();
 }
-
+window.onload = () => {
+    if(localStorage.getItem("authorized") == "false" || localStorage.getItem('authorized')==null)
+    {
+        authorizationnav.innerHTML = "";
+        authorizationnav.innerHTML += "<input type='password' name='inputPassword' id='inputPassword'>\n"+
+        "<button type='button' onclick='authorization()' id='authorizationButton'>Войти</button>";  
+    }
+    else 
+    {
+        authorizationnav.innerHTML = "";
+        authorizationnav.innerHTML += "<a class='hrefProfile' href='profile.html'>Профиль</a>";
+    }
+    showAllAnime(); 
+}
 function sortProfile() {
     let sortType = document.getElementById("sortParam");
     let data = dataOnSite;
@@ -177,7 +163,6 @@ function sortProfile() {
     }
     printListAnimeProfile(data);
 }
-
 function sortList(){
     let sortType = document.getElementById("sortParam");
     let data = dataOnSite;
@@ -227,7 +212,6 @@ function sortList(){
     }
     addGotData(data);
 }
-
 function printListAnimeProfile(data) {
     listOfAnimeInProfile.innerHTML = "";
     data.forEach((row) => {
