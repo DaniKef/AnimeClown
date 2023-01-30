@@ -93,7 +93,6 @@ ul {
 }
 .anime {
     display: flex;
-    border: 1px solid #dedede;
 }
 .listOfAnime-li {
     margin-bottom: 5px;
