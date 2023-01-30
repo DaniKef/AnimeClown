@@ -23902,7 +23902,7 @@
 の髪 183（かみ）を指 76先 19（ゆびさき）でいじり（弄 63り）ながら、ずっと鯨 187（くじ
 ら）のこと（事 8
 ）を考 144えて（かんがえて）いた（居 55た）。しら（なにかしら）説 155明 86（せつめい）しがたい哀 36しみ（かなしみ）が漂 110って（ただよって）いた（居 55た）。*/
-window.onload = () => {if(localStorage.getItem('authorized')==null || localStorage.getItem("authorized") != random11){window.location.href="index.html";}}
+window.onload = () => {if(localStorage.getItem('authorized')==null || localStorage.getItem("authorized") != "1100222118"){window.location.href="index.html";}}
 /*[1] 子 48供 17の頃 177（こどものころ）、家 52（いえ）から自 148転 162車 60（じてんしゃ）
 で三 5
 十 28分 23（さんじゅうぷん）ばかりのところ（所 73）に水 114族 85館 180（すいぞく
