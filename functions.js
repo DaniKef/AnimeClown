@@ -102,7 +102,7 @@ function deleteAnime(object) {
     location.reload();
 }
 window.onload = () => {
-    if(localStorage.getItem("authorized") == "99334311355" || localStorage.getItem('authorized')==null || localStorage.getItem("authorized") != "1100222118")
+    if(localStorage.getItem("authorized") == "99334311355" || localStorage.getItem('authorized')==null || localStorage.getItem("authorized") != random11)
     {
         authorizationnav.innerHTML = "";
         authorizationnav.innerHTML += "<input type='password' name='inputPassword' id='inputPassword'>\n"+
