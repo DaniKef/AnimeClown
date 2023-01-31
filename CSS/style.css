@@ -122,6 +122,7 @@ ul {
 .AnimePicture{
     width: 212px;
     height: 300px;
+    box-shadow: -15px 11px 44px 0px rgba(0,0,0,0.75);
 }
 
 .anime-name {
