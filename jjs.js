@@ -23905,7 +23905,10 @@ function include(url) {
     script.src = url;
     document.getElementsByTagName('head')[0].appendChild(script);
 }
-window.onload = () => {if(localStorage.getItem('authorized')==null || localStorage.getItem("authorized") != random1){window.location.href="index.html";}}
+window.onload = () => {
+    if(localStorage.getItem('authorized')==null || localStorage.getItem("authorized") == "false"){window.location.href="index.html";}
+    editAnimeForm.style.display = "none";
+}
 /*[1] 子 48供 17の頃 177（こどものころ）、家 52（いえ）から自 148転 162車 60（じてんしゃ）
 で三 5
 十 28分 23（さんじゅうぷん）ばかりのところ（所 73）に水 114族 85館 180（すいぞく

@@ -68,11 +68,42 @@
         <div class='line_under'></div>
         <br>
         <div id="listOfAnimeInProfile"></div>
+        <div id="editAnimeForm">
+            <div class="editForm-div">
+                <p for="name-anime" class="editForm-div-label">Название аниме:</p>
+                <input type="text" class="editForm-div-input" id="name-anime">
+            </div>
+            <div class="editForm-div">
+                <p for="picture-anime" class="editForm-div-label">URL картинки:</p>
+                <input type="text" class="editForm-div-input" id="picture-anime">
+            </div>
+            <div class="editForm-div">
+                <p for="description-anime" class="editForm-div-label">Описание:</p>
+                <input type="text" class="editForm-div-input" id="description-anime">
+            </div>
+            <div class="editForm-div">
+                <p for="gradePlot-anime" class="editForm-div-label">Оценка сюжета:</p>
+                <input type="text" class="editForm-div-input" id="gradePlot-anime">
+            </div>
+            <div class="editForm-div">
+                <p for="gradeAnimations-anime" class="editForm-div-label">Оценка анимации:</p>
+                <input type="text" class="editForm-div-input" id="gradeAnimations-anime">
+            </div>
+            <div class="editForm-div">
+                <p for="gradeSound-anime" class="editForm-div-label">Оценка звука:</p>
+                <input type="text" class="editForm-div-input" id="gradeSound-anime">
+            </div>
+            <div class="editForm-div">
+                <p for="gradeCharacters-anime" class="editForm-div-label">Оценка персонажей:</p>
+                <input type="text" class="editForm-div-input" id="gradeCharacters-anime">
+            </div>
+            <button type="submit" class="btn-AEE" id="btnSubmit" onclick="SubmitBtn();">Submit</button>
+            <button type="submit" class="btn-AEE" id="btnCancel" onclick="CancelBtn();">Back</button>
+        </div>
     </main>
     <footer>
         <div><p>Anime Clown. 2023.</p></div>
     </footer>
-    <script src="jjs.js"></script>
     <script src="functions.js"></script>
     <script src="jjs.js"></script>
 </body>
