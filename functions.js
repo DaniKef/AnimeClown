@@ -269,6 +269,24 @@ function selectAnimeList() {
             .then(res => res.json())
             .then(data => {dataOnSite = data; addGotData(data);})
     }
+    else if (authorType.value == "Vanya") 
+    {
+        formData.append('authorName', authorType.value.toString());
+        fetch(scriptUrl, {
+            method: 'POST', body: formData
+        })
+            .then(res => res.json())
+            .then(data => {dataOnSite = data; addGotData(data);})
+    }
+    else if (authorType.value == "KefirOk") 
+    {
+        formData.append('authorName', authorType.value.toString());
+        fetch(scriptUrl, {
+            method: 'POST', body: formData
+        })
+            .then(res => res.json())
+            .then(data => {dataOnSite = data; addGotData(data);})
+    }
 }
 
 function editAnime(object) {
